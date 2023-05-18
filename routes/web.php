@@ -18,3 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/about', [DashboardController::class, 'about']);
+Route::get('/online', [DashboardController::class, 'online']);
+Route::get('/contact', [DashboardController::class, 'contact']);
+Route::get('/catalogue', [DashboardController::class, 'catalogue']);
+Route::get('/buy', [DashboardController::class, 'buy']);

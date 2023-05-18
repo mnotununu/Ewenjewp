@@ -74,12 +74,12 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class="active"><a href="index.html"><span>Home</span></a></li>
+                <li class="active"><a href="/dashboard"><span>Home</span></a></li>
                   
-                <li><a href="about.html"><span>About Us</span></a></li>
-                <li><a href="online.html"><span>Book Online</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li>
-                  <li><a href="catalogue.html"><span>Catalogues</span></a></li>
+                <li><a href="/about"><span>About Us</span></a></li>
+                <li><a href="/online"><span>Book Online</span></a></li>
+                <li><a href="/contact"><span>Contact</span></a></li>
+                  <li><a href="/catalogue"><span>Catalogues</span></a></li>
               </ul>
             </nav>
           </div>
@@ -112,7 +112,7 @@
                 <h1 data-aos="fade-up" class="mb-5"> <span class="typed-words"></span></h1>
 
                 <p data-aos="fade-up" data-aos-delay="100"><a href="online.html" class="btn btn-primary btn-pill">Hire Stand</a> 
-                  <a href="buy.html" class="btn btn-primary btn-pill">Buy Stand</a>
+                  <a href="/buy" class="btn btn-primary btn-pill">Buy Stand</a>
                 </p>
                 
               </div>
