@@ -27,21 +27,21 @@
 
         <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
 
-        <link rel="stylesheet" href="{{url('../../fonts/icomoon/style.css')}}">
-        <link rel="stylesheet" href="{{url('../../fonts/flaticon/font/flaticon.css')}}">
+        <link rel="stylesheet" href="{{url('/fonts/icomoon/style.css')}}">
+        <link rel="stylesheet" href="{{url('/fonts/flaticon/font/flaticon.css')}}">
 
-        <link rel="stylesheet" href="{{url('../../chat/css-w/floating-wpp.css')}}">
-        <link rel="stylesheet" href="{{url('../../chat/css-w/myWeb.css')}}">
+        <link rel="stylesheet" href="{{url('/chat/css-w/floating-wpp.css')}}">
+        <link rel="stylesheet" href="{{url('/chat/css-w/myWeb.css')}}">
 
-        <link rel="stylesheet" href="{{url('../../css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{url('../../css/magnific-popup.css')}}">
-        <link rel="stylesheet" href="{{url('../../css/jquery-ui.css')}}">
-        <link rel="stylesheet" href="{{url('../../css/owl.carousel.min.css')}}">
-        <link rel="stylesheet" href="{{url('../../css/owl.theme.default.min.css')}}">
-        <link rel="stylesheet" href="{{url('../../css/bootstrap-datepicker.css')}}">
-        <link rel="stylesheet" href="{{url('../../css/aos.css')}}">
-        <link rel="stylesheet" href="{{url('../../css/rangeslider.css')}}">
-        <link rel="stylesheet" href="{{url('../../css/style.css')}}">
+        <link rel="stylesheet" href="{{url('/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{url('/css/magnific-popup.css')}}">
+        <link rel="stylesheet" href="{{url('/css/jquery-ui.css')}}">
+        <link rel="stylesheet" href="{{url('/css/owl.carousel.min.css')}}">
+        <link rel="stylesheet" href="{{url('/css/owl.theme.default.min.css')}}">
+        <link rel="stylesheet" href="{{url('/css/bootstrap-datepicker.css')}}">
+        <link rel="stylesheet" href="{{url('/css/aos.css')}}">
+        <link rel="stylesheet" href="{{url('/css/rangeslider.css')}}">
+        <link rel="stylesheet" href="{{url('/css/style.css')}}">
     
     </head>
     <body>
@@ -69,11 +69,12 @@
                         <div class="col-12 col-md-8 d-none d-xl-block">
                             <nav class="site-navigation position-relative text-right" role="navigation">
                                 <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                                    <li class="active"><a href="/dashboard"><span>Home</span></a></li>
-                                    <li><a href="/about"><span>About Us</span></a></li>
-                                    <li><a href="/online"><span>Book Online</span></a></li>
-                                    <li><a href="/contact"><span>Contact</span></a></li>
-                                    <li><a href="/catalogue"><span>Catalogues</span></a></li>
+
+                                    <li class="{{(request()->is('dashboard'))? 'active' : ''}}"><a href="/dashboard"><span>Home</span></a></li>
+                                    <li class="{{(request()->is('about'))? 'active' : ''}}"><a href="/about"><span>About Us</span></a></li>
+                                    <li class="{{(request()->is('online'))? 'active' : ''}}"><a href="/online"><span>Book Online</span></a></li>
+                                    <li class="{{(request()->is('contact'))? 'active' : ''}}"><a href="/contact"><span>Contact</span></a></li>
+                                    <li class="{{(request()->is('catalogue'))? 'active' : ''}}"><a href="/catalogue"><span>Catalogues</span></a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -84,9 +85,11 @@
         </div>
 
         <!-- Page Content -->
-        <main>
-            {{ $slot }}
-        </main>
+        <div style="padding-top: 60px;">
+            <main>
+                {{ $slot }}
+            </main>
+        </div>
 
         <div class="col-12 text-md-center text-left">
             <p>

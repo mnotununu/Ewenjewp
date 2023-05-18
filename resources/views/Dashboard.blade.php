@@ -6,7 +6,7 @@
             <div class="row justify-content-center mb-4">
               <div class="col-md-10 text-center">
                 <h1 data-aos="fade-up" class="mb-5"> <span class="typed-words"></span></h1>
-                <p data-aos="fade-up" data-aos-delay="100"><a href="online.html" class="btn btn-primary btn-pill">Hire Stand</a> 
+                <p data-aos="fade-up" data-aos-delay="100"><a href="/online" class="btn btn-primary btn-pill">Hire Stand</a> 
                   <a href="/buy" class="btn btn-primary btn-pill">Buy Stand</a>
                 </p>
               </div>
