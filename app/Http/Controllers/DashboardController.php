@@ -21,4 +21,10 @@ class DashboardController extends Controller
     public function catalogue(){
         return view('catalogue');
     }
+    public function contact(){
+        return view('contact');
+    }
+    public function staysolid(){
+        return view('livestream.staysolid');
+    }
 }

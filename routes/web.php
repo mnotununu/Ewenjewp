@@ -14,12 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(
+    function () {
+        Route::get('/staysolid', [DashboardController::class, 'staysolid']);
 });
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/about', [DashboardController::class, 'about']);
 Route::get('/online', [DashboardController::class, 'online']);
 Route::get('/contact', [DashboardController::class, 'contact']);
 Route::get('/catalogue', [DashboardController::class, 'catalogue']);
 Route::get('/buy', [DashboardController::class, 'buy']);
+// Route::get('/staysolid', [DashboardController::class, 'staysolid']);
